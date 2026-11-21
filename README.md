@@ -1,40 +1,14 @@
-# API REST com Node.js, Express e MySQL
+# API Node com MySQL
 
-**Aluno:** João Pedro Carvalho Feitoza
-**Turma:** (preencha sua turma)
-**Disciplina:** Programação Web III (PW3) — Trabalho Prático
+Aluno: João Pedro Carvalho Feitoza
+Turma: 3ndn
 
-API REST de CRUD de usuários feita com Express e `mysql2` (pool de conexões), usando SQL direto com queries parametrizadas (`?`) contra SQL Injection, sem ORM.
+API com Node.js, Express e MySQL, feita para a atividade de PW3.
+Tem as rotas de cadastrar, listar, atualizar e apagar usuários.
 
-## Como rodar
+Como rodar
 
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Crie o banco e a tabela executando o `schema.sql` no MySQL:
-   ```bash
-   mysql -u seu_usuario -p < schema.sql
-   ```
-3. Copie o `.env.example` para `.env` e preencha com suas credenciais:
-   ```bash
-   cp .env.example .env
-   ```
-4. Inicie o servidor:
-   ```bash
-   npm start
-   ```
-
-## Endpoints
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | /usuarios | Cria usuário (`nome`, `email` no body) |
-| GET | /usuarios | Lista todos os usuários |
-| PUT | /usuarios/:id | Atualiza um usuário |
-| DELETE | /usuarios/:id | Remove um usuário |
-
-Exemplo de body (POST/PUT):
-```json
-{ "nome": "Maria Souza", "email": "maria@exemplo.com" }
-```
+1. Rode `npm install` para instalar as dependências.
+2. Execute o arquivo schema.sql no MySQL para criar o banco e a tabela.
+3. Copie o .env.example para .env e coloque seu usuário e senha do MySQL.
+4. Rode `npm start`. O servidor sobe na porta 3000.
